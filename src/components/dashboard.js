@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import SearchBar from '../containers/search-bar'
 import ClientList from '../containers/client-list';
 
-export default class App extends Component {
+export default class Dashboard extends Component {
   render() {
     return (
       <div>

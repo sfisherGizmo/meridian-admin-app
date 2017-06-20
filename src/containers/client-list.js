@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class ClientList extends Component {
 
     renderClientData(clientData) {
         console.log(clientData);
         for( let i in clientData ) {
+            let href = `/edit-client/${ i }`;
             return (
                 <div
-                    key={i}
+                    key={ i }
                     className="panel panel-default">
                     <h4>
                         { clientData[i].first_name } { clientData[i].last_name }
                     </h4>
                     <p>
-                        <a
-                            href={i}>
-                            Edit User
-                        </a>
+                        { clientData[i].email }
+                    </p>
+                    <p>
+                        <Link
+                            to={{
+                                pathname: href,
+                                client: clientData
+                            }} >
+                            <span
+                                className="glyphicon glyphicon-pencil">
+                            </span>
+                        </Link>
                     </p>
                 </div>
             );
