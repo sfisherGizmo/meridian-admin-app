@@ -1,0 +1,9 @@
+const actionTypes = {
+    GET_CLIENTS: 'GET_CLIENTS',
+    DISPATCH_CLIENTS: 'DISPATCH_CLIENTS',
+    DATABASE_FULLFILLED: 'DATABASE_FULLFILLED',
+    GET_ERROR: 'GET_ERROR'
+};
+
+export default actionTypes;
+
